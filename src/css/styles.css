@@ -18,3 +18,15 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+
+.btn {
+  width: 112px;
+  height: 30px;
+  background-color: teal;
+  border-radius: 50px;
+}
+.search_btn {
+  display: block;
+  margin: 20px auto;
+}
