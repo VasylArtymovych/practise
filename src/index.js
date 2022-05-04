@@ -1,4 +1,4 @@
-import './partials/fetch-servise.html';
+///////////////search Articles in newsapi.org : ////////////////////////
 import './css/styles.css';
 import NewsApiService from './JS/NewsApiServise';
 import LoadMoreArticels from './JS/load-more-artiicels';
