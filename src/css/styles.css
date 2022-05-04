@@ -12,8 +12,10 @@ body {
   line-height: 1.5;
 }
 
-.pages-list {
-  list-style: none;
+
+
+.back-link {
+  margin: 10px 0px 0px 20px;
 }
 
 #fetch-form{
