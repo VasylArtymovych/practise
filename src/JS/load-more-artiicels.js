@@ -1,6 +1,6 @@
 export default class LoadMoreArticels{
     constructor({selector, hidden = false}){
-        this.refs = this.getrefs(selector);
+        this.refs = this.getrefs(selector);  //refs
 
         hidden && this.hide();  //same as: If(hidden===true) {this.hide()}
     }

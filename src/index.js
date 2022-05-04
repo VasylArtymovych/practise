@@ -35,7 +35,7 @@ function onSubmit(evt){
     loadArticles();
 
     evt.currentTarget.reset();
-}
+};
 
 function loadArticles(){
     loadMoreArticels.disable()
@@ -44,14 +44,14 @@ function loadArticles(){
         loadMoreArticels.able()
         renderArticles(articles);
     })
-}
+};
 
 function renderArticles(articles){
     refs.articles.insertAdjacentHTML('beforeend', articlesTmpl(articles));
 
-}
+};
 
 function clearArticlesContainer(){
     refs.articles.innerHTML = '';
-}
+};
 
