@@ -1,3 +1,4 @@
+import './partials/fetch-servise.html';
 import './css/styles.css';
 import NewsApiService from './JS/NewsApiServise';
 import LoadMoreArticels from './JS/load-more-artiicels';
