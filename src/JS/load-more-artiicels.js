@@ -1,6 +1,8 @@
 export default class LoadMoreArticels{
     constructor({selector, hidden = false}){
         this.refs = this.getrefs(selector);
+
+        hidden && this.hide();  //same as: If(hidden===true) {this.hide()}
     }
 
     getrefs(selector){
@@ -11,11 +13,13 @@ export default class LoadMoreArticels{
 
         return refs;
     }
+
     able(){
         this.refs.loadMoreBtn.disabled = false;
         this.refs.spinner.classList.add('is-hidden');
         this.refs.label.textContent = "load-more"
     }
+    
     disable(){
         this.refs.loadMoreBtn.disabled = true;
         this.refs.spinner.classList.remove('is-hidden');
