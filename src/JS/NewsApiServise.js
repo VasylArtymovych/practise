@@ -1,3 +1,4 @@
+
 export default class NewsApiService{
     constructor(){
         this.searchQuery = ''
@@ -16,7 +17,7 @@ export default class NewsApiService{
         .then(response => response.json())
         .then((data) => {
             this.incrementPage();
-            
+
             return data.articles;
         })
     }
