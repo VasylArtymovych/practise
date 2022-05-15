@@ -59,8 +59,7 @@
 ///////////////search Articles in newsapi.org : ////////////////////////
 import NewsApiService from './JS/NewsApiServise';
 import LoadMoreArticels from './JS/load-more-artiicels';
-import articlesTmpl from './templates/search-articles.hbs'
-
+import articlesTmpl from './templates/search-articles.hbs';
 const refs = {
     searchForm: document.querySelector('#fetch-form'),
     searchBtn: document.querySelector('.js-btn-subm'),
@@ -116,3 +115,27 @@ function renderArticles(articles){
 function clearArticlesContainer(){
     refs.articles.innerHTML = '';
 };
+
+async function loadArticles(){
+    const articles = await newsApiServise.fetchArticels();
+    return articles;
+}
+
+
+// let elem = document.querySelector('js-articles');
+// let infScroll = new InfiniteScroll( elem, {
+//   // options
+//   path: '.pagination__next',
+//   append: '.post',
+//   history: false,
+// });
+
+// window.addEventListener('scroll', onScroll);
+
+// function onScroll(){
+//     if (window.scrollY + window.innerHeight >= window.scrollHeight){
+//         loadAndRenderArticles()
+//     }
+// //     console.log(window.innerHeight);
+//     console.log(window.scrollY);
+// }

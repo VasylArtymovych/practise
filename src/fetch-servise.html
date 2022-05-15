@@ -25,7 +25,10 @@
       </label>
     </form>
 
-    <ul class="articles js-articles"></ul>
+    <ul
+      class="articles js-articles"
+      data-infinite-scroll='{ "path": ".pagination__next", "append": ".post", "history": false }'
+    ></ul>
 
     <button type="button" class="btn btn-primary load-btn" data-action="load-more">
       <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
