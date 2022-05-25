@@ -10,17 +10,22 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
     <title>news-server</title>
   </head>
   <body>
     <div class="back-link">
-      <a href="index.html" class="back-link">index</a>
+      <a href="../index.html" class="back-link">index</a>
     </div>
 
     <form action="fetch" name="fetch" id="fetch-form">
       <label>
-        <input type="text" name="query" placeholder="what to search?" autocomplete="off" />
+        <input
+          type="text"
+          name="query"
+          placeholder="what to search?"
+          autocomplete="off"
+        />
         <button class="btn js-btn-subm" type="submit">search</button>
       </label>
     </form>
@@ -30,11 +35,19 @@
       data-infinite-scroll='{ "path": ".pagination__next", "append": ".post", "history": false }'
     ></ul>
 
-    <button type="button" class="btn btn-primary load-btn" data-action="load-more">
-      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    <button
+      type="button"
+      class="btn btn-primary load-btn"
+      data-action="load-more"
+    >
+      <span
+        class="spinner-border spinner-border-sm"
+        role="status"
+        aria-hidden="true"
+      ></span>
       <span class="label">Load More</span>
     </button>
 
-    <script src="index.js"></script>
+    <script src="../index.js"></script>
   </body>
 </html>

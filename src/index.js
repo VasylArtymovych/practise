@@ -57,8 +57,8 @@
 
 // Change code  on async/await type:  
 ///////////////search Articles in newsapi.org : ////////////////////////
-import NewsApiService from './JS/NewsApiServise';
-import LoadMoreArticels from './JS/load-more-artiicels';
+import NewsApiService from './fetchAPI/NewsApiServise';
+import LoadMoreArticels from './fetchAPI/load-more-artiicels';
 import articlesTmpl from './templates/search-articles.hbs';
 const refs = {
     searchForm: document.querySelector('#fetch-form'),

@@ -1,4 +1,4 @@
-import {getGoods, createGoods, deleteGoods, updateGoods} from './fetchAPI'
+import {getItems, postItem, deleteItem, updateItem} from './fetchAPI'
 
 const refs = {
     form: document.querySelector('.form'),
@@ -13,7 +13,7 @@ refs.fetchBtn.addEventListener('click', onFetchBtn);
 
 function onFetchBtn(){
     showLoader()
-    getGoods().then(data => {
+    getItems().then(data => {
         items = data;
         renderItems();
     })
@@ -30,6 +30,7 @@ function submitHandler(evt){
     evt.preventDefault();
 
     let text = evt.currentTarget.elements.text.value;
+
     const newItem = {
         text,
         isDone: false,
@@ -49,7 +50,7 @@ function onItemClick(evt){
 
     switch (evt.target.nodeName){
         case 'BUTTON':
-            deletItem(id);
+            removeItem(id);
             break;
         case 'INPUT':
             toggleItem(id);
@@ -62,7 +63,7 @@ function onItemClick(evt){
 // create new item:
 function createItem(newItem){
     showLoader();
-    return createGoods(newItem)
+    return postItem(newItem)
     .then(data => {items.push(data)})
     .then(()=>{
         renderItems();    
@@ -77,10 +78,11 @@ function createItem(newItem){
 function toggleItem(id){
     showLoader();
     const item = items.find(item => item.id === id);
+    console.log(item);
 
-    updateGoods(id, {isDone: !item.isDone})
+    updateItem(id, {isDone: !item.isDone})
     .then(()=>{
-        items = items.map(item => item.id === id ? {...item, isDone: !item.isDone} : item,);
+        items = items.map(item => item.id === id ? {...item, isDone: !item.isDone} : item);
     })
     .then(()=> {
         renderItems();
@@ -91,10 +93,10 @@ function toggleItem(id){
 
 };
 
-// delet item from list:
-function deletItem(id){
+// delete item from list:
+function removeItem(id){
     showLoader();
-    deleteGoods(id)
+    deleteItem(id)
     .then(()=> {
         items = items.filter(item => item.id !== id);
         renderItems();

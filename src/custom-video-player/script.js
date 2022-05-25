@@ -23,6 +23,8 @@ function togglePlay () {
 	video[method]();
 };
 
+
+
 function updateBtn() {
 	const icon = video.paused ? '▶️' : '❚ ❚';
 	toggle.textContent = icon;
