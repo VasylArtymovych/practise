@@ -1,1 +1,0 @@
-{"version":3,"sources":["style.css"],"names":[],"mappings":"AAAA,aACI,YAAa,CACb,cACJ","file":"style.d8901418.css","sourceRoot":"../src","sourcesContent":[".movies_list {\n    display: flex;\n    flex-wrap: wrap;\n}"]}
