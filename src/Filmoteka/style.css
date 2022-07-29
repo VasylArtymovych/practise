@@ -16,16 +16,16 @@
 .card_item:not(:last-child){
     margin-right: 15px;
 }
-.img_thumb {
+.wraper {
     width: 100%;
-    height: 450px;
+    height: 32rem;
 }
 
-.img_thumb img {
+.wraper img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    /* object-fit: fill; */
 }
 
 .active {
